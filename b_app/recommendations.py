@@ -5,10 +5,11 @@ from b_app import db
 import numpy as np
 
 
+#  fetch and process songs from Spotify
 def spotify_songs():
     sp = Spotify(client_credentials_manager=SpotifyClientCredentials(
-        c_id='spotify_id',
-        c_secret='spotify_secret'
+        client_id='spotify_id',
+        client_secret='spotify_secret'
         ))
 
     results = sp.search(q='genre:pop', limit=50)

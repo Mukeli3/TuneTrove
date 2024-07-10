@@ -8,9 +8,10 @@ import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
 
 
-routes = Blueprint('routes'. __name__)
+routes = Blueprint('routes', __name__)
 
 
+#  fetching songs and recommendations calculate cosine similarity.
 @routes.route('/songs')
 @login_required
 def get_songs():
