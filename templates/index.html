@@ -7,6 +7,15 @@
 	<body>
 		<div id="app">
 			<h1>TuneTrove</h1>
+			<h1>Welcome to TuneTrove!</h1>
+			<nav>
+				<ul>
+					<li><a href="{{ url_for('auth.login') }}">Login</a></li>
+					<li><a href="{{ url_for('auth.register') }}">Register</a></li>
+					<li><a href="{{ url_for('auth.profile') }}">Profile</a></li>
+					<li><a href="{{ url_for('routes.get_recommendations') }}">Get Recommendations</a></li>
+				</ul>
+			</nav>
 			<div id="auth">
 				<h2>Register</h2>
 				<form method="POST" action="/register">
